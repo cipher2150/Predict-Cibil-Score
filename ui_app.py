@@ -26,6 +26,14 @@ if st.button("Predict Score"):
     model = load_model()
     input_data = engineer_features(input_data)
     score = predict_score(model, input_data.iloc[0])
-    if score > 900:
-        score = 899
+    
     st.success(f"Predicted Shadow Score: {score}")
+    
+    
+    
+    st.success(f"Check: {monthly_income}")
+    st.success(f"Check: {total_txn_amount}")
+    st.success(f"check: {active_months}")
+    st.success(f"check: {loan_count}")
+    st.success(f"check: {on_time_payments}")
+    
